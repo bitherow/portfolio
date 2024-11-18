@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
 * {
     box-sizing: border-box;
     border: 0 none;
@@ -22,27 +25,69 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.main {
-    flex: 1 0 auto;
+.header, .main, .footer {
+    display: flex;
+    width: 700px;
 }
-
-.header, .footer {
-    flex: 0 0 auto;
-}
-
-/* Header */
 
 .header, .site-header {
     display: flex;
     justify-content: space-between;
 }
 
-/* Title */
+.main {
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 2rem 1rem 1rem;
+}
 
-.title, .logo {
-    padding: 3em 3em 3em 0;
+.main p {
+    margin-bottom: 1rem;
+}
+
+.main p:last-child {
+    margin-bottom: 0;
+}
+
+.main p:has(img) {
+    margin: 1rem auto;
+}
+
+.header, .footer {
+    flex: 0 0 auto;
+}
+
+.header {
+    margin-top: 1rem;
+}
+
+.header a {
+    text-decoration:none;
+}
+
+.header .nav a {
+    font-weight: bold;
+}
+
+.site-header .logo {
+    margin-right: 1rem;
+}
+
+.site-header .logo img {
+    display: block;
+}
+
+.site-header .title {
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
 }
 
 @media (max-width: 767px) {
@@ -57,8 +102,14 @@ body {
     }
 }
 
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .title * {
-    color: #111;
+    color: #111;         
 }
 
 .title p {
@@ -69,8 +120,9 @@ body {
 
 .footer {
     display: flex;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
     justify-content: space-between;
-    border-top: 1px solid #222;
 }
 
 .footer a {
@@ -84,9 +136,9 @@ body {
 /* Typografy */
 
 body {
-    font-family: sans-serif;
+    font-family: "Work Sans", sans-serif;
     line-height: 1.5rem;
-    color: #444;
+    color: #292929;
 }
 
 p, td, th, li, dd {
